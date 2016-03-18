@@ -1,3 +1,9 @@
-var apiKey = require('./../.env').apiKey;
+var getRepository = require('./../js/repo.js').getRepository;
 
-console.log('hello?');
+$(function(){
+  $('#repo-form').submit(function(event){
+    event.preventDefault();
+    var userName = $('#userName').val();
+    getRepository(userName);
+  });
+});
