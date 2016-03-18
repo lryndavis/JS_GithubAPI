@@ -1,3 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic|Playfair+Display:400,400italic,700,700italic);
+
+* {
+  font-family: 'Roboto';
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
 h1 {
-  color: blue;
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.user-info {
+  display: none;
+}
+
+
+
+li {
+  list-style: none;
+}
+
+h4 {
+  font-weight: 300;
 }

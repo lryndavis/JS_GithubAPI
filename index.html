@@ -8,11 +8,28 @@
     <title>Don't Fear The Repo</title>
   </head>
   <body>
-<h1>Don't Fear the Repo</h1>
-<form id="repo-form">
-  <label for="userName">User:</label>
-  <input id="userName" type="text">
-  <button type="submit">Find</button>
-</form>
+    <div class="container">
+      <h1>Don't Fear the Repo</h1>
+        <form id="repo-form" class="form-inline">
+          <div class="form-group">
+            <label for="userName">Find a Github User:</label>
+            <input id="userName" type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-default btn-block">Find</button>
+        </form>
+
+      <div class="user">
+        <div class="user-info">
+          <h1 class="user-name"></h1>
+          <p>Name: <span class="full-name"></span></p>
+          <p>Email: <span class="email"></span></p>
+          <p>Followers: <span class="followers"></span></p>
+          <h4>Repositories:</h4>
+          <ul class="repositories">
+          </ul>
+        </div>
+      </div>     <!-- end of user div -->
+
+    </div>  <!-- end of container div -->
   </body>
 </html>
