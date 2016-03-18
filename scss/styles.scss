@@ -6,6 +6,19 @@
   text-transform: uppercase;
 }
 
+img {
+  height: 120px;
+  width: 120px;
+}
+
+ .container {
+   width: 80%;
+ }
+
+.rp {
+  display: none;
+}
+
 h1 {
   font-family: 'Playfair Display';
   font-weight: 400;
@@ -15,14 +28,23 @@ h1 {
 
 .user-info {
   display: none;
+  p {
+    font-weight: 300;
+  }
 }
 
-
-
-li {
+ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+
+
 h4 {
   font-weight: 300;
+}
+
+h3 {
+  font-weight: lighter;
 }

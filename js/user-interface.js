@@ -5,6 +5,7 @@ $(function(){
   $('#repo-form').submit(function(event){
     event.preventDefault();
     userName = $('#userName').val();
+    $("#city").val("");
     getUser(userName);
     getRepo(userName);
   });
