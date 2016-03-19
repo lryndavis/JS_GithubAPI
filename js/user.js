@@ -19,6 +19,7 @@ exports.getUser = function(userName){
     followers = response.followers;
 
     $('.user-info').show();
+    $('.repo-list').show();
     $('.userIMG').append('<img src="' + userAvatar + '">');
     $('.user-name').text(userName);
     $('.full-name').text(fullName);
