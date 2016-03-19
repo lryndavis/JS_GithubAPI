@@ -149,7 +149,6 @@ img {
 .user-info {
   font-size: 1.1em;
   display: none;
-  height: 120px;
   overflow: hidden;
   margin-bottom: 30px;
   padding-left: 55px;
@@ -192,6 +191,9 @@ ul {
 
 a {
   color: $heading-font-color;
+  &:hover {
+    color: $body-font-color;
+  }
 }
 
 .fa {
