@@ -6,25 +6,7 @@
   text-transform: uppercase;
 }
 
-img {
-  height: 120px;
-  width: 120px;
-  padding: 0;
-}
-
-.main-header {
-  font-size: 3em;
-  margin-top: 20px;
-}
-
-.userIMG {
-  padding: 0;
-  border-right: 1px solid black;
-}
-
-.user {
-  width: 350px;
-}
+//main containers
 
 .container {
    width: 80%;
@@ -36,13 +18,19 @@ img {
   overflow: hidden;
 }
 
+.main-header {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+//search form column
+
 #input {
   padding-left: 0;
   margin-left: 0;
 }
 
 //changes stupid default yellow focus background on text inputs in chrome!
-
 input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
@@ -51,17 +39,19 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-.desc {
-  padding-top: 5px;
+//heading fonts
+
+h4 {
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-bottom: 15px;
 }
 
-.rp {
-  display: none;
-  border-bottom: 1px solid black;
-}
-
-.rd {
-  font-size: .8em;
+h3 {
+  font-weight: lighter;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 0;
 }
 
 h1 {
@@ -72,6 +62,23 @@ h1 {
   margin-bottom: 25px;
   margin-top: 0;
   padding-top: 0;
+}
+
+//user info divs
+
+img {
+  height: 120px;
+  width: 120px;
+  padding: 0;
+}
+
+.userIMG {
+  padding: 0;
+  border-right: 1px solid black;
+}
+
+.user {
+  width: 350px;
 }
 
 .user-info {
@@ -86,8 +93,23 @@ h1 {
   }
 }
 
+//repo list and info toggle wells
+
 .repo-list {
   display: none;
+}
+
+.desc {
+  padding-top: 5px;
+}
+
+.rp {
+  display: none;
+  border-bottom: 1px solid black;
+}
+
+.rd {
+  font-size: .8em;
 }
 
 ul {
@@ -106,17 +128,4 @@ ul {
 .fa {
   font-weight: lighter;
   padding-left: 5px;
-}
-
-h4 {
-  font-weight: 300;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-weight: lighter;
-  margin-top: 0;
-  margin-bottom: 25px;
-  padding-top: 0;
 }

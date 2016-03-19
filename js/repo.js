@@ -1,9 +1,10 @@
 var apiKey = require('./../.env').apiKey;
 
-//call to get repos from user and loop thru results
+//GET request for repos, loop thru results
 exports.getRepo = function(userName){
   $.get('https://api.github.com/users/'+userName+'/repos?access_token=' + apiKey).then(function(response){
     $.each(response, function(i, repo) {
+      //fetch repo info
       numOfRepos = response.length;
       name = this.name;
       linkTo = this.html_url;
@@ -11,10 +12,10 @@ exports.getRepo = function(userName){
 
       // ensure that description field will not be blank if info hasn't been provided
       if (this.description !== "") {
-          repoDescription = this.description;
-        } else {
-          repoDescription = "Description not Provided.";
-        }
+        repoDescription = this.description;
+      } else {
+        repoDescription = "Description not Provided.";
+      }
 
         //generate info for display:none repo info toggle well
         //create id for divs based on repo index
@@ -27,7 +28,7 @@ exports.getRepo = function(userName){
         $(".amount").text(numOfRepos);
         $(".repositories").append('<li class="repo" id=' + i + '>' + name + repoData + '</li>');
       });
-        //toggle repo info well on click based on div id
+        //toggle repo info well on click using unique div id
         $('.repositories').off("click", "repo");
         $('.repositories').on("click", ".repo", function(){
         $(".repo-data" + this.id).slideToggle();
