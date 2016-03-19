@@ -24,9 +24,6 @@ March 18, 2016
 
 Clone this repo
 
-#### Known Bugs
-* Call to github API will only return a maximum of 30 repositories. Huh?
-
 ##### License
 
 *This software is licensed under the MIT license.*

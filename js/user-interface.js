@@ -7,7 +7,7 @@ $(function(){
     event.preventDefault();
     userName = $('#userName').val();
     $("#userName").val("");
-    //disable button and alter text during AJAX request
+    //disable button and alter text during request
     $(".btn").attr("disabled", true).text("SEARCHING....");
     //call for user info
     getUser(userName);

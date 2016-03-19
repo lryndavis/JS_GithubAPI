@@ -2,9 +2,8 @@ var apiKey = require('./../.env').apiKey;
 
 //GET request for repos, loop thru results
 exports.getRepo = function(userName){
-  $.get('https://api.github.com/users/'+userName+'/repos?access_token=' + apiKey).then(function(response){
+  $.get('https://api.github.com/users/'+userName+'/repos?per_page=100&page=3access_token=' + apiKey).then(function(response){
     $.each(response, function(i, repo) {
-      //fetch repo info
       numOfRepos = response.length;
       name = this.name;
       linkTo = this.html_url;
