@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic|Playfair+Display:400,400italic,700,700italic);
 
 //color variables
-
 $background-color: #fff;
 $heading-font-color: #A07825;
 $body-font-color: #000;
@@ -9,18 +8,20 @@ $body-font-color: #000;
 //font variables
 $heading-font: "Playfair Display";
 $body-text: 'Roboto';
-
+$font-weight--lightest: lighter;
+$font-weight--medium: 300;
+$font-weight--bold: 400;
 
 * {
   font-family: $body-text;
-  font-weight: lighter;
+  font-weight: $font-weight--lightest;
   text-transform: uppercase;
   background-color: $background-color;
   color: $body-font-color;
 }
 
 body {
-    background-color: $background-color;
+  background-color: $background-color;
 }
 
 
@@ -62,13 +63,13 @@ h1, h4 {
 
 //changes stupid default yellow focus background on text inputs in chrome!
 input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    border: 1px solid $heading-font-color;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  border: 1px solid $heading-font-color;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    border: 1px solid $heading-font-color;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  border: 1px solid $heading-font-color;
 }
 
 .form-section {
@@ -94,13 +95,13 @@ form {
 //heading fonts
 
 h4 {
-  font-weight: 300;
+  font-weight: $font-weight--medium;
   font-size: 1.5em;
   margin-bottom: 15px;
 }
 
 h3 {
-  font-weight: lighter;
+  font-weight: $font-weight--lightest;
   margin-top: 0;
   margin-bottom: 25px;
   padding-top: 0;
@@ -108,7 +109,7 @@ h3 {
 
 h1 {
   font-family: $heading-font;
-  font-weight: 400;
+  font-weight: $font-weight--bold;
   font-style: italic;
   text-transform: capitalize;
   margin-bottom: 25px;
@@ -153,7 +154,7 @@ img {
   margin-bottom: 30px;
   padding-left: 55px;
   p {
-    font-weight: 300;
+    font-weight: $font-weight--medium;
   }
 }
 
@@ -161,6 +162,9 @@ img {
 
 .repo-list {
   display: none;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
 }
 
 .desc {
@@ -170,6 +174,10 @@ img {
 .rp {
   display: none;
   border-bottom: 1px solid black;
+}
+
+.repo-data {
+  background-color: #f7f4ee;
 }
 
 .rd {
@@ -197,6 +205,6 @@ a {
 }
 
 .fa {
-  font-weight: lighter;
+  font-weight: $font-weight--lightest;
   padding-left: 5px;
 }
