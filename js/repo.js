@@ -16,9 +16,9 @@ exports.getRepo = function(userName){
         }
 
         repoData =            '<div class="rp repo-data' + i + '">' +
-                                  '<p><a href="' + linkTo + '">'+ name +'</a></p>' +
-                                  '<p>' + repoDescription + '</p>' +
-                                  '<p>Stars: '+ stars + '</p>' +
+                                  '<p class="rd desc">' + repoDescription + '</p>' +
+                                  '<p class="rd">Stars: '+ stars + '</p>' +
+                                  '<p class="rd"><a href="' + linkTo + '">Check it Out</a></p>' +
                                 '</div>';
         $(".amount").text(numOfRepos);
         $(".repositories").append('<li class="repo" id=' + i + '>' + name + repoData + '</li>')
@@ -26,8 +26,10 @@ exports.getRepo = function(userName){
         $('.repositories').off("click", "repo");
         $('.repositories').on("click", ".repo", function(){
         $(".repo-data" + this.id).slideToggle();
+        $(".btn").attr("disabled", false).text("SEARCH");
       });
       }).fail(function(error){
         $(".repositories").text(error.responseJSON.message);
+        $(".btn").attr("disabled", false).text("SEARCH");
       });
     };

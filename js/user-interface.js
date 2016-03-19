@@ -5,7 +5,8 @@ $(function(){
   $('#repo-form').submit(function(event){
     event.preventDefault();
     userName = $('#userName').val();
-    $("#city").val("");
+    $("#userName").val("");
+    $(".btn").attr("disabled", true).text("SEARCHING....");
     getUser(userName);
     getRepo(userName);
   });

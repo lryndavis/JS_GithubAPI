@@ -2,7 +2,6 @@ var apiKey = require('./../.env').apiKey;
 
 exports.getUser = function(userName){
   $.get('https://api.github.com/users/'+userName+'?access_token=' + apiKey).then(function(response){
-    console.log(response);
     if (response.name !== null) {
         fullName = response.name;
       } else {
@@ -25,9 +24,10 @@ exports.getUser = function(userName){
     $('.full-name').text(fullName);
     $('.email').text(emailAddress);
     $('.followers').text(followers);
+    $(".btn").attr("disabled", false).text("SEARCH");
 
   }).fail(function(error){
-    $('.user-info').show();
-    $('.user-info').text(error.responseJSON.message);
+    $('.form-section').append(error.responseJSON.message);
+    $(".btn").attr("disabled", false).text("SEARCH");
   });
 };
