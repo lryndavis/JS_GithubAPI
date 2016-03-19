@@ -41,6 +41,16 @@ img {
   margin-left: 0;
 }
 
+//changes stupid default yellow focus background on text inputs in chrome!
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 .desc {
   padding-top: 5px;
 }
