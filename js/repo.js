@@ -16,16 +16,18 @@ exports.getRepo = function(userName){
         }
 
         repoData =            '<div class="rp repo-data' + i + '">' +
+                                  '<i class="fa fa-angle-down"></i>' + 
                                   '<p class="rd desc">' + repoDescription + '</p>' +
                                   '<p class="rd">Stars: '+ stars + '</p>' +
                                   '<p class="rd"><a href="' + linkTo + '">Check it Out</a></p>' +
                                 '</div>';
         $(".amount").text(numOfRepos);
-        $(".repositories").append('<li class="repo" id=' + i + '>' + name + repoData + '</li>')
+        $(".repositories").append('<li class="repo" id=' + i + '>' + name + repoData + '</li>');
       });
         $('.repositories').off("click", "repo");
         $('.repositories').on("click", ".repo", function(){
         $(".repo-data" + this.id).slideToggle();
+        $("fa").slideToggle();
         $(".btn").attr("disabled", false).text("SEARCH");
       });
       }).fail(function(error){
