@@ -1,9 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic|Playfair+Display:400,400italic,700,700italic);
 
+//color variables
+
+$background-color: #fff;
+$heading-font-color: #A07825;
+$body-font-color: #000;
+
+//font variables
+$heading-font: "Playfair Display";
+$body-text: 'Roboto';
+
+
 * {
-  font-family: 'Roboto';
+  font-family: $body-text;
   font-weight: lighter;
   text-transform: uppercase;
+  background-color: $background-color;
+  color: $body-font-color;
+}
+
+body {
+    background-color: $background-color;
+}
+
+
+h1, h4 {
+  color: $heading-font-color;
+}
+
+.main-header {
+  color: $body-font-color;
 }
 
 //main containers
@@ -30,13 +56,39 @@
   margin-left: 0;
 }
 
+#userName {
+  width: 300px;
+}
+
 //changes stupid default yellow focus background on text inputs in chrome!
 input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
+    border: 1px solid $heading-font-color;
 }
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
+    border: 1px solid $heading-font-color;
+}
+
+.form-section {
+  width: 450px;
+  margin-top: 10px;
+}
+
+form {
+  width: 300px;
+}
+
+.btn-default {
+  margin-top: 10px;
+  background-color: $heading-font-color;
+  color: white;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  background-color: white;
+  color: $heading-font-color;
+  border: 1px solid $heading-font-color;
 }
 
 //heading fonts
@@ -55,7 +107,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Playfair Display';
+  font-family: $heading-font;
   font-weight: 400;
   font-style: italic;
   text-transform: capitalize;
@@ -65,6 +117,19 @@ h1 {
 }
 
 //user info divs
+
+.fa-caret-right {
+  display: none;
+  margin-left: 10px;
+  color: $heading-font-color;
+  font-size: .9em;
+}
+
+.user-name {
+  font-family: $heading-font;
+  text-transform: capitalize;
+  color: $heading-font-color;
+}
 
 img {
   height: 120px;
@@ -123,6 +188,10 @@ ul {
     font-size: 1.1em;
     font-weight: 300;
   }
+}
+
+a {
+  color: $heading-font-color;
 }
 
 .fa {

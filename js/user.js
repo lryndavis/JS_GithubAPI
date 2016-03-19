@@ -25,6 +25,7 @@ exports.getUser = function(userName){
     $('.repo-list').show();
     $('.userIMG').append('<img src="' + userAvatar + '">');
     $('.user-name').text(userName);
+    $('.fa-caret-right').show();
     $('.full-name').text(fullName);
     $('.email').text(emailAddress);
     $('.followers').text(followers);
