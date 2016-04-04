@@ -1,4 +1,4 @@
-# Don't Fear the Repo
+#Github API App
 
 By Lauryn Davis
 
@@ -34,10 +34,10 @@ Project Objectives:
 `exports.apiKey = "YOUR_API_KEY"`
 
 * Within the directory, run:
-`$ npm install`
-`$ bower install`
-`$ gulp build`
-`$ gulp serve`
+* `$ npm install`
+* `$ bower install`
+* `$ gulp build`
+* `$ gulp serve`
 
 ##### License
 
