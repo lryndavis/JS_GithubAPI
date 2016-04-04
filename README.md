@@ -1,28 +1,43 @@
-# Github API
+# Don't Fear the Repo
 
-## Epicodus Javascript Code Review, Week 1
+By Lauryn Davis
 
-##### A simple app that allows the user to search for github users and their public repositories thru use of the Github API. A search will return a user's avatar, full name, email address, and # of followers. It will also list all of the github user's repositories; including information about each individual repo's description, # of stars, and a link to view.
+3.18.2016
 
-March 18, 2016
+Don't Fear the Repo is a JS app that allows the user to search for github users and their public repositories thru use of the Github API. A search will return a user's avatar, full name, email address, and # of followers. It will also list all of the github user's repositories; including information about each individual repo's description, # of stars, and a link to view.
 
-##### By Lauryn Davis
+Project Objectives:
+
+* Makes two AJAX requests, and parses the JSON responses correctly
+* Manages front end dependencies with Bower
+* Manages build tool dependencies with npm
+* Includes a gulp-based asset pipeline with a development server
 
 ##### Technologies Used
 
-* HTML
-* SCSS
-* javascript
-* Jquery
+* Javascript
+* JQuery
 * Node
 * Bower
 * Github API
+* HTML
+* SCSS
 * Bootstrap
 * Font Awesome
 
 ##### Setup
 
-Clone this repo
+* Download personal access token from Github
+* Clone this repository: https://github.com/lryndavis/JS_GithubAPI
+* Within the directory, create a new file named '.env', and add the following to the page:
+
+`exports.apiKey = "YOUR_API_KEY"`
+
+* Within the directory, run:
+`$ npm install`
+`$ bower install`
+`$ gulp build`
+`$ gulp serve`
 
 ##### License
 

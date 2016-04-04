@@ -13,5 +13,6 @@ $(function(){
     getUser(userName);
     //call for repo info
     getRepo(userName);
+    $('#userName').clear();
   });
 });
